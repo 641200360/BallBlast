@@ -1,99 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ball Blast - Play Free Online Ball Shooting Game | BallBlast.online</title>
-    <meta name="description" content="Play Ball Blast online for free! Experience the addictive ball shooting gameplay where you blast colorful balls and achieve high scores. No download required.">
+    <meta name="description" content="Play Ball Blast online for free - the exciting arcade shooting game where you blast colorful balls with your cannon!">
     <link rel="canonical" href="https://ballblast.online" />
+    <title>Ball Blast Online - Free Arcade Shooting Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'apple-blue': '#007AFF',
-                        'apple-gray': '#8E8E93',
-                        'apple-light-gray': '#F2F2F7',
+                        apple: {
+                            light: '#f5f5f7',
+                            dark: '#1d1d1f',
+                            blue: '#0071e3',
+                            gray: '#86868b',
+                            slate: '#424245'
+                        }
                     }
                 }
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
+    <style>
+        .game-container {
+            aspect-ratio: 16/9;
+            width: 100%;
+            max-width: 900px;
+        }
+        @media (max-width: 640px) {
             .game-container {
-                aspect-ratio: 16/9;
-                max-height: 80vh;
+                aspect-ratio: 9/16;
+                height: 80vh;
             }
         }
     </style>
 </head>
-<body class="bg-apple-light-gray min-h-screen">
+<body class="bg-apple-light text-apple-dark font-sans antialiased">
+    <!-- Header Section -->
     <header class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <h1 class="text-4xl md:text-5xl font-bold text-center text-apple-blue mb-4">
-                Ball Blast
-            </h1>
-            <p class="text-xl text-center text-apple-gray max-w-3xl mx-auto">
-                Experience the ultimate ball shooting adventure - Blast your way through endless levels of colorful balls!
-            </p>
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-3xl font-bold text-apple-blue">Ball Blast Online</h1>
+                    <p class="text-apple-gray mt-1">The ultimate arcade shooting experience</p>
+                </div>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#game" class="text-apple-blue hover:underline">Play Now</a></li>
+                        <li><a href="#about" class="text-apple-slate hover:underline">About</a></li>
+                        <li><a href="#how-to-play" class="text-apple-slate hover:underline">How to Play</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="game-container w-full mx-auto bg-white rounded-lg shadow-lg overflow-hidden mb-8">
-            <iframe 
-                src="https://www.crazygames.com/embed/ball-blast" 
-                class="w-full h-full"
-                frameborder="0" 
-                allow="gamepad *;"
-                title="Play Ball Blast Online"
-                loading="lazy">
-            </iframe>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-apple-light to-gray-100 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-semibold text-apple-dark mb-6">Blast your way through endless balls in this addictive arcade shooter!</h2>
+            <a href="#game" class="inline-block bg-apple-blue text-white px-8 py-3 rounded-full font-medium hover:bg-blue-600 transition-colors">Play Ball Blast Now</a>
         </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <section class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold text-apple-blue mb-4">How to Play Ball Blast</h2>
-                <ul class="list-disc list-inside space-y-2 text-apple-gray">
-                    <li>Aim and shoot at the colorful balls</li>
-                    <li>Match colors to create powerful combos</li>
-                    <li>Clear all balls to advance to the next level</li>
-                    <li>Use power-ups to enhance your shooting abilities</li>
-                    <li>Compete for the highest score on the leaderboard</li>
-                </ul>
-            </section>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Game Embed Section -->
+        <section id="game" class="mb-16">
+            <div class="game-container mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <iframe src="https://www.crazygames.com/embed/ball-blast" style="width: 100%; height: 100%;" frameborder="0" allow="gamepad *;"></iframe>
+            </div>
+        </section>
 
-            <section class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold text-apple-blue mb-4">Game Features</h2>
-                <ul class="list-disc list-inside space-y-2 text-apple-gray">
-                    <li>Addictive arcade-style gameplay</li>
-                    <li>Multiple levels with increasing difficulty</li>
-                    <li>Special power-ups and bonuses</li>
-                    <li>Global leaderboard system</li>
-                    <li>Mobile-friendly controls</li>
-                </ul>
-            </section>
-        </div>
+        <!-- About Section -->
+        <section id="about" class="mb-16 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-semibold text-apple-dark mb-6 border-b pb-2">About Ball Blast</h2>
+            <div class="prose prose-lg text-apple-slate">
+                <p>Ball Blast is an exciting arcade-style shooting game where your goal is to blast as many colorful balls as possible with your cannon. The game features simple yet addictive gameplay that's easy to learn but challenging to master.</p>
+                
+                <p>Originally developed as a mobile game, Ball Blast has gained massive popularity worldwide with millions of players enjoying its fast-paced action. Now you can play the web version directly in your browser, no downloads required!</p>
+                
+                <p>The game tests your reflexes and strategic thinking as you navigate through increasingly difficult levels filled with bouncing balls. Upgrade your cannon, unlock special abilities, and compete for high scores in this endlessly entertaining shooter.</p>
+            </div>
+        </section>
 
-        <section class="mt-8 bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-bold text-apple-blue mb-4">About Ball Blast</h2>
-            <p class="text-apple-gray leading-relaxed">
-                Ball Blast is an exciting online shooting game that combines strategy and quick reflexes. 
-                Players must aim and shoot at colorful balls, creating satisfying chain reactions and combos. 
-                With its simple yet engaging mechanics, Ball Blast offers hours of entertainment for players of all ages. 
-                The game features smooth controls, vibrant graphics, and an addictive scoring system that will keep you coming back for more.
-            </p>
+        <!-- How to Play Section -->
+        <section id="how-to-play" class="mb-16 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-semibold text-apple-dark mb-6 border-b pb-2">How to Play Ball Blast</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-medium text-apple-blue mb-3">Basic Controls</h3>
+                    <ul class="space-y-2 text-apple-slate">
+                        <li><strong>Mouse/Touch:</strong> Aim your cannon by moving your mouse or finger</li>
+                        <li><strong>Click/Tap:</strong> Shoot balls with your cannon</li>
+                        <li><strong>Spacebar:</strong> Use special abilities (when unlocked)</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-medium text-apple-blue mb-3">Game Objectives</h3>
+                    <ul class="space-y-2 text-apple-slate">
+                        <li>Destroy all balls in each level to progress</li>
+                        <li>Collect coins to upgrade your cannon</li>
+                        <li>Avoid letting balls reach the bottom</li>
+                        <li>Complete challenges to unlock special powers</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-16 max-w-3xl mx-auto">
+            <h2 class="text-2xl font-semibold text-apple-dark mb-6 border-b pb-2">Game Features</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="text-apple-blue text-4xl mb-3">🎯</div>
+                    <h3 class="font-medium mb-2">Precision Shooting</h3>
+                    <p class="text-sm text-apple-gray">Test your aim with challenging targets</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="text-apple-blue text-4xl mb-3">⚡</div>
+                    <h3 class="font-medium mb-2">Power Ups</h3>
+                    <p class="text-sm text-apple-gray">Unlock special abilities</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="text-apple-blue text-4xl mb-3">🏆</div>
+                    <h3 class="font-medium mb-2">Leaderboards</h3>
+                    <p class="text-sm text-apple-gray">Compete for high scores</p>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="bg-white mt-12 py-6 border-t">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-apple-gray">
-                © 2024 BallBlast.online - Play the best free online ball shooting game
-            </p>
+    <!-- Footer -->
+    <footer class="bg-apple-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-apple-gray">© 2023 Ball Blast Online. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-apple-gray hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-apple-gray hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-apple-gray hover:text-white">Contact</a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-apple-gray text-sm">
+                <p>Ball Blast is a trademark of its respective owner. This website is not affiliated with the original game developers.</p>
+            </div>
         </div>
     </footer>
 </body>
-</html> 
+</html>
